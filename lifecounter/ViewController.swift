@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        playerLoseLabel.text = ""
+        updateHpLabel()
     }
 
     @IBAction func updatePlayerScore(sender: UIButton) {
@@ -73,10 +73,20 @@ class ViewController: UIViewController {
     func updateHpLabel() {
         playerOneHpLabel.text = "\(playerOneHp)"
         playerTwoHpLabel.text = "\(playerTwoHp)"
-        if playerOneHp <= 0 {
-            playerLoseLabel.text = "Player 1 LOSES!"
-        } else if playerTwoHp <= 0 {
-            playerLoseLabel.text = "PLayer 2 LOSES!"
+        if playerTwoHp <= 0 || playerOneHp <= 0 {
+            playerOnePlusOne.isEnabled = false
+            playerOnePlusFive.isEnabled = false
+            playerOneMinusOne.isEnabled = false
+            playerOneMinusFive.isEnabled = false
+            playerTwoPlusOne.isEnabled = false
+            playerTwoPlusFive.isEnabled = false
+            playerTwoMinusOne.isEnabled = false
+            playerTwoMinusFive.isEnabled = false
+            if playerOneHp <= 0 {
+                playerLoseLabel.text = "Player 1 LOSES!"
+            } else {
+                playerLoseLabel.text = "PLayer 2 LOSES!"
+            }
         } else {
             playerLoseLabel.text = ""
         }
