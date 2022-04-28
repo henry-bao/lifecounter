@@ -7,7 +7,7 @@
 
 import UIKit
 
-var gameHistory: [String] = []
+var gameHistory: [String] = ["Game Started!"]
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             Player(name: "Player 3", health: 20),
             Player(name: "Player 4", health: 20)
         ]
-        gameHistory = []
+        gameHistory = ["Game Started!"]
         reloadTableData(player: allPlayers[0])
     }
     

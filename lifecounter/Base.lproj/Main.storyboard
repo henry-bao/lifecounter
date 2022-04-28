@@ -73,6 +73,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="+">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -87,6 +88,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="-">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                                     <color key="baseBackgroundColor" red="0.92128556969999997" green="0.40004614389999998" blue="0.38559298730000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
