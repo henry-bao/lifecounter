@@ -7,22 +7,18 @@
 
 import UIKit
 
-var gameHistory: [String] = ["Game Started!"]
+var gameHistory: [String] = []
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var allPlayers: [Player] = [
-        Player(name: "Player 1", health: 20),
-        Player(name: "Player 2", health: 20),
-        Player(name: "Player 3", health: 20),
-        Player(name: "Player 4", health: 20)
-    ]
+    var allPlayers: [Player] = []
         
     override func viewDidLoad() {
         super.viewDidLoad()
         numberSliderLabel.text = "\(Int(numberSlider.value))"
         playerTable.delegate = self
         playerTable.dataSource = self
+        restartGame()
     }
     
     @IBOutlet weak var addPlayerButton: UIButton!
@@ -69,14 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func restartButtonClicked(_ sender: Any) {
-        allPlayers = [
-            Player(name: "Player 1", health: 20),
-            Player(name: "Player 2", health: 20),
-            Player(name: "Player 3", health: 20),
-            Player(name: "Player 4", health: 20)
-        ]
-        gameHistory = ["Game Started!"]
-        reloadTableData(player: allPlayers[0])
+        restartGame()
     }
     
     @IBAction func addPlayerButtonClicked(_ sender: Any) {
@@ -93,6 +82,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             gameHistory.append("\(textField!.text!) was added")
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func restartGame() {
+        allPlayers = [
+            Player(name: "Player 1", health: 20),
+            Player(name: "Player 2", health: 20),
+            Player(name: "Player 3", health: 20),
+            Player(name: "Player 4", health: 20)
+        ]
+        gameHistory = ["Game Started!"]
+        reloadTableData(player: allPlayers[0])
     }
     
     func reloadTableData(player: Player) {
