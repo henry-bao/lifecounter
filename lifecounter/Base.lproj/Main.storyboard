@@ -50,22 +50,22 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lJt-8S-up2">
-                                <rect key="frame" x="12" y="324" width="296" height="135.5"/>
+                                <rect key="frame" x="12" y="314.5" width="296" height="145"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dz-5W-AbO">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="8wN-f2-cf4">
-                                        <rect key="frame" x="-2" y="30.5" width="300" height="31"/>
+                                        <rect key="frame" x="-2" y="40" width="300" height="31"/>
                                         <connections>
                                             <action selector="numberSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="YI5-1E-Gei"/>
                                         </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eaI-au-ZgH">
-                                        <rect key="frame" x="0.0" y="70.5" width="296" height="65"/>
+                                        <rect key="frame" x="0.0" y="80" width="296" height="65"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywi-F4-fhQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="65"/>
@@ -100,7 +100,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q7v-Or-vJb">
-                                <rect key="frame" x="15" y="59" width="289" height="257"/>
+                                <rect key="frame" x="15" y="59" width="289" height="247.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Player Cell" id="7B6-tQ-g6h" customClass="PlayerTableCell" customModule="lifecounter">
