@@ -92,6 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let player = allPlayers[indexPath!.row]
         let alert = UIAlertController(title: "Change Player Name", message: "Enter new player name", preferredStyle: .alert)
         alert.addTextField { (textField) in
+            textField.text = player.name
             textField.placeholder = "Player Name"
         }
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
