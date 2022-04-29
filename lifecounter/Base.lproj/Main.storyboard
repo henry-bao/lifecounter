@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8qS-nG-OAB">
                                 <rect key="frame" x="15" y="20" width="289" height="31"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-zG-1OU">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwd-zG-1OU">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add">
@@ -29,7 +29,7 @@
                                             <action selector="addPlayerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4gO-DB-gfN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AC-nn-HF4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AC-nn-HF4">
                                         <rect key="frame" x="103" y="0.0" width="83" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="History"/>
@@ -39,7 +39,7 @@
                                             </segue>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqT-fa-pcm">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqT-fa-pcm">
                                         <rect key="frame" x="206" y="0.0" width="83" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Restart"/>
@@ -110,23 +110,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="289" height="44.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GE-9u-sQQ">
-                                                    <rect key="frame" x="16" y="11" width="62.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZw-8w-w0J">
                                                     <rect key="frame" x="253.5" y="11" width="20.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="myB-Ot-ObH">
+                                                    <rect key="frame" x="16" y="7" width="37" height="30.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="gray" title="✏️">
+                                                        <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="nameChangeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fuB-Ut-9eO"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9GE-9u-sQQ">
+                                                    <rect key="frame" x="61" y="11" width="62.5" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="9GE-9u-sQQ" firstAttribute="leading" secondItem="Akl-2l-NqO" secondAttribute="leading" constant="16" id="53Z-5c-dsq"/>
+                                                <constraint firstItem="myB-Ot-ObH" firstAttribute="top" secondItem="Akl-2l-NqO" secondAttribute="top" constant="7" id="6mg-NW-85w"/>
+                                                <constraint firstItem="myB-Ot-ObH" firstAttribute="leading" secondItem="Akl-2l-NqO" secondAttribute="leading" constant="16" id="76F-xt-Kwd"/>
                                                 <constraint firstAttribute="bottom" secondItem="lZw-8w-w0J" secondAttribute="bottom" constant="12.5" id="Flx-sX-zOF"/>
+                                                <constraint firstItem="9GE-9u-sQQ" firstAttribute="leading" secondItem="myB-Ot-ObH" secondAttribute="trailing" constant="8" symbolic="YES" id="UcB-Ds-avw"/>
                                                 <constraint firstAttribute="trailing" secondItem="lZw-8w-w0J" secondAttribute="trailing" constant="15" id="VLN-XH-kzA"/>
+                                                <constraint firstAttribute="bottom" secondItem="myB-Ot-ObH" secondAttribute="bottom" constant="7" id="c4t-m8-Xxl"/>
                                                 <constraint firstItem="9GE-9u-sQQ" firstAttribute="top" secondItem="Akl-2l-NqO" secondAttribute="top" constant="11" id="ekr-Dj-dne"/>
                                                 <constraint firstItem="lZw-8w-w0J" firstAttribute="top" secondItem="Akl-2l-NqO" secondAttribute="top" constant="11" id="fwG-Px-P2i"/>
                                                 <constraint firstAttribute="bottom" secondItem="9GE-9u-sQQ" secondAttribute="bottom" constant="12" id="jUn-Wb-NGR"/>

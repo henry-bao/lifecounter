@@ -62,6 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             gameHistory.append("\(player[0].name) lost \(Int(numberSlider.value)) health")
         }
         reloadTableData(player: player[0])
+        playerTable.selectRow(at: selectedIndex!, animated: true, scrollPosition: .none)
     }
     
     @IBAction func restartButtonClicked(_ sender: Any) {
@@ -84,6 +85,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func nameChangeButtonClicked(_ sender: Any) {
+        let button = sender as! UIButton
+        let cell = button.superview?.superview as! PlayerTableCell
+        let indexPath = playerTable.indexPath(for: cell)
+        let player = allPlayers[indexPath!.row]
+        let alert = UIAlertController(title: "Change Player Name", message: "Enter new player name", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Player Name"
+        }
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            if textField?.text != "" {
+                gameHistory.append("\(player.name) changed name to \(textField!.text!)")
+                player.changeName(newName: textField!.text!)
+                self.reloadTableData(player: player)
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
     func restartGame() {
         allPlayers = [
             Player(name: "Player 1", health: 20),

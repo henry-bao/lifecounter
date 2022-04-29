@@ -21,4 +21,7 @@ class Player {
     func subtract(healthToSubtract: Int) {
         self.health -= healthToSubtract
     }
+    func changeName(newName: String) {
+        self.name = newName
+    }
 }
